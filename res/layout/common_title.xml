@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common_title_rl"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:background="@color/com_title_first_bg_color" >
+
+    <Button
+        android:id="@+id/common_title_left_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@color/transparent"
+        android:drawableLeft="@drawable/return_icon"
+        android:maxWidth="220dp"
+        android:singleLine="true"
+        android:textColor="#444444"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/common_left_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/common_title_right_bt"
+        android:layout_toRightOf="@id/common_title_left_bt"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/common_title_text_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:singleLine="true"
+        android:text="title"
+        android:textSize="19sp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/common_title_right_bt"
+        android:layout_width="74dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/comm_title_button_selector"
+        android:gravity="center"
+        android:textColor="#646464"
+        android:textSize="14sp" 
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/com_grey_line_color" />
+
+</RelativeLayout>

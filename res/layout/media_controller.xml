@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mFrameLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:visibility="visible" >
+
+    <LinearLayout
+        android:id="@+id/play_button_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingTop="5.0dip" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_player_2" >
+
+            <TextView
+                android:id="@+id/current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5.0dip"
+                android:gravity="left|center"
+                android:singleLine="true"
+                android:text="00:00"
+                android:textColor="@color/play_time_color"
+                android:textSize="13.0sp" />
+
+            <SeekBar
+                android:id="@+id/PlaybackProgressBar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:layout_weight="1.0"
+                android:max="100"
+                android:maxHeight="7.0dip"
+                android:minHeight="7.0dip"
+                android:progress="0"
+                android:progressDrawable="@drawable/progress_style_play"
+                android:thumb="@drawable/play_loading_btn_bg"
+                android:thumbOffset="8.0dip" />
+            <!-- style="@style/seekBarStyleHorizontal" -->
+
+            <TextView
+                android:id="@+id/total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5.0dip"
+                android:gravity="right|center"
+                android:singleLine="true"
+                android:text="00:00"
+                android:textColor="@color/play_time_color"
+                android:textSize="13.0sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_player_1" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+
+                <Button
+                    android:id="@+id/btn_exit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:background="@drawable/btn_exit_bg"
+                    android:onClick="onClick"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_back" />
+
+                <Button
+                    android:id="@+id/btn_play_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_pause"
+                    android:onClick="onClick" />
+
+                <Button
+                    android:id="@+id/btn_forward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_forward" />
+
+                <Button
+                    android:id="@+id/brightness_controler"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_full_screen"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/info_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="right"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_player_4"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+
+            <TextView
+                android:id="@+id/video_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20.0dip"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="video name test"
+                android:textColor="@color/play_time_color"
+                android:textSize="13.0sp" />
+
+            <ImageView
+                android:id="@+id/battery_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10.0dip"
+                android:background="@drawable/ic_battery_0" />
+
+            <TextView
+                android:id="@+id/last_modify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20.0dip"
+                android:gravity="left|center"
+                android:singleLine="true"
+                android:text="Time 00:23:63"
+                android:textColor="@color/play_time_color"
+                android:textSize="13.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_player_3"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1.0"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_voice"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/btn_voice" />
+
+                <SeekBar
+                    android:id="@+id/VioceProgressBar"
+                    style="@style/seekBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_weight="1.0"
+                    android:progress="0"
+                    android:secondaryProgress="100"
+                    android:thumbOffset="8.0dip" />
+
+                <Button
+                    android:id="@+id/btn_setplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/player_right" 
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/info_brightness"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:orientation="horizontal" 
+        android:visibility="gone">
+
+        <com.personal.hwplayer.ui.view.VerticalSeekBar
+            android:id="@+id/brightness_seekBar"
+            android:layout_width="25dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:maxHeight="50dp"
+            android:minHeight="50dp"
+            android:progressDrawable="@drawable/progress_style_play_vertical"
+            android:thumb="@drawable/play_loading_btn_bg_vertical"
+            android:thumbOffset="8dip" >
+        </com.personal.hwplayer.ui.view.VerticalSeekBar>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/controlPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="absc"
+        android:textColor="@color/white"
+        android:textSize="40.0sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/brightnessInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center"
+        android:layout_marginRight="30.0dip"
+        android:text="absc"
+        android:textColor="@color/white"
+        android:textSize="40.0sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/playListControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center"
+        android:background="@drawable/btn_playlist_unfold"
+        android:visibility="gone" />
+
+</FrameLayout>

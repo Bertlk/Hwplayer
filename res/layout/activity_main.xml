@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    
+    <EditText 
+        android:id="@+id/main_et"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入播放源地址"
+        android:text="http://d.17url.net/mv/upload/own/zuitianmideshiguang_102202/gq/20140626103058-00001.mp4"
+        android:textSize="16sp"/>
+    
+    <Button 
+        android:id="@+id/main_bt"
+        android:layout_below="@id/main_et"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="播放视频"/>
+    
+    <ImageView
+        android:id="@+id/test_iv"
+        android:layout_below="@id/main_bt"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

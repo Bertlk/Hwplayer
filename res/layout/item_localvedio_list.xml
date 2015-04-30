@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/com_list_base"
+        android:orientation="horizontal"
+        android:padding="0dp" >
+
+        <RelativeLayout
+            android:layout_width="140dp"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/item_play_pic"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/default_340_192"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/com_shade"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/item_play_times"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="2dp"
+                android:drawableRight="@drawable/home_icon_play"
+                android:gravity="bottom"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/vedio_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="标题"
+                android:textColor="#46494b"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/vedio_describe"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:lineSpacingExtra="2dp"
+                android:maxLines="2"
+                android:text="内容内容内容内容内容内容内容内容内容内容内容内容内容内容"
+                android:textColor="#606162"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="cache_phone_facturers">
+        <item>MB526</item>
+        <item>HTC G7</item>
+        <item>M9</item>
+        <item>U8860</item>
+        <item>ZTE U807</item>
+    </string-array>
+
+</resources>
